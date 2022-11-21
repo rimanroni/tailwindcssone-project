@@ -1,0 +1,906 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="dist/output.css">
+  <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.4/dist/flowbite.min.css" />
+ </head>
+ <body class="bg-slate-200">
+     <!--  navbar here  -->
+      <nav class="px-2 bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
+        <div class="container flex flex-wrap items-center justify-between mx-auto">
+          <a href="#" class="flex items-center">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlPHIynAVMF6nY_G92Dx_L8rjbPPbz2p_vq4awS95GV8QQAFFbKW7bBS__HU3fLNmTS4c&usqp=CAU" class="h-6 mr-3 sm:h-10" alt="Flowbite Logo" />
+              <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white underline">Riman Roni</span>
+          </a>
+          <button data-collapse-toggle="navbar-multi-level" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-multi-level" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-multi-level">
+            <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+              <li>
+                <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-white dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Home</a>
+              </li>
+              <li>
+                  <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent sm:z-100">About us<svg class="w-4 h-4 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                  <!-- Dropdown menu -->
+                  <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                      <ul class="py-1 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                        <li>
+                          <a href="#" class="link">Dashboard</a>
+                        </li>
+                        <li aria-labelledby="dropdownNavbarLink">
+                          <button id="doubleDropdownButton" data-dropdown-toggle="doubleDropdown" data-dropdown-placement="right-start" type="button" class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dropdown<svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg></button>
+                          <div id="doubleDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700">
+                              <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="doubleDropdownButton">
+                                <li>
+                                  <a href="#" class="link">Overview</a>
+                                </li>
+                                <li>
+                                  <a href="#" class="link">My downloads</a>
+                                </li>
+                                <li>
+                                  <a href="#" class="link">Billing</a>
+                                </li>
+                                <li>
+                                  <a href="#" class="link">Rewards</a>
+                                </li>
+                              </ul>
+                          </div>
+                        </li>
+                        <li>
+                          <a href="#" class="link">Earnings</a>
+                        </li>
+                      </ul>
+                      <div class="py-1">
+                        <a href="#" class="link">Sign out</a>
+                      </div>
+                  </div>
+              </li>
+              <li>
+                <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- wapper -->
+      <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-20">
+            <h1 class="text-2xl font-medium title-font mb-4 text-gray-900">OUR TEAM</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them.</p>
+          </div>
+          <div class="flex flex-wrap -m-4">
+            <div class="p-4 lg:w-1/4 md:w-1/2">
+              <div class="h-full flex flex-col items-center text-center">
+                <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="https://dummyimage.com/200x200">
+                <div class="w-full">
+                  <h2 class="title-font font-medium text-lg text-gray-900">Alper Kamu</h2>
+                  <h3 class="text-gray-500 mb-3">UI Developer</h3>
+                  <p class="mb-4">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+                  <span class="inline-flex">
+                    <a class="text-gray-500">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                      </svg>
+                    </a>
+                    <a class="ml-2 text-gray-500">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                      </svg>
+                    </a>
+                    <a class="ml-2 text-gray-500">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                      </svg>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 lg:w-1/4 md:w-1/2">
+              <div class="h-full flex flex-col items-center text-center">
+                <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="https://i.pinimg.com/originals/80/d3/64/80d364e09d31fcba8af274926d4332ff.jpg">
+                <div class="w-full">
+                  <h2 class="title-font font-medium text-lg text-gray-900">Holden Caulfield</h2>
+                  <h3 class="text-gray-500 mb-3">UI Developer</h3>
+                  <p class="mb-4">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+                  <span class="inline-flex">
+                    <a class="text-gray-500">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                      </svg>
+                    </a>
+                    <a class="ml-2 text-gray-500">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                      </svg>
+                    </a>
+                    <a class="ml-2 text-gray-500">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                      </svg>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 lg:w-1/4 md:w-1/2">
+              <div class="h-full flex flex-col items-center text-center">
+                <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="https://dummyimage.com/202x202">
+                <div class="w-full">
+                  <h2 class="title-font font-medium text-lg text-gray-900">Atticus Finch</h2>
+                  <h3 class="text-gray-500 mb-3">UI Developer</h3>
+                  <p class="mb-4">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+                  <span class="inline-flex">
+                    <a class="text-gray-500">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                      </svg>
+                    </a>
+                    <a class="ml-2 text-gray-500">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                      </svg>
+                    </a>
+                    <a class="ml-2 text-gray-500">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                      </svg>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 lg:w-1/4 md:w-1/2">
+              <div class="h-full flex flex-col items-center text-center">
+                <img alt="team" class="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" src="https://dummyimage.com/203x203">
+                <div class="w-full">
+                  <h2 class="title-font font-medium text-lg text-gray-900">Henry Letham</h2>
+                  <h3 class="text-gray-500 mb-3">UI Developer</h3>
+                  <p class="mb-4">DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+                  <span class="inline-flex">
+                    <a class="text-gray-500">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                      </svg>
+                    </a>
+                    <a class="ml-2 text-gray-500">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                      </svg>
+                    </a>
+                    <a class="ml-2 text-gray-500">
+                      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                        <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                      </svg>
+                    </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-yellow-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <span class="ml-3 text-xl">Tailblocks</span>
+          </a>
+          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+            <a class="mr-5 hover:text-gray-900">First Link</a>
+            <a class="mr-5 hover:text-gray-900">Second Link</a>
+            <a class="mr-5 hover:text-gray-900">Third Link</a>
+            <a class="mr-5 hover:text-gray-900">Fourth Link</a>
+          </nav>
+          <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Button
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+
+
+      <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-wrap -m-4">
+            <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
+              <div class="h-full text-center">
+                <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="https://dummyimage.com/302x302">
+                <p class="leading-relaxed">Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+                <span class="inline-block h-1 w-10 rounded bg-yellow-500 mt-6 mb-4"></span>
+                <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">HOLDEN CAULFIELD</h2>
+                <p class="text-gray-500">Senior Product Designer</p>
+              </div>
+            </div>
+            <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
+              <div class="h-full text-center">
+                <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="https://dummyimage.com/300x300">
+                <p class="leading-relaxed">Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+                <span class="inline-block h-1 w-10 rounded bg-yellow-500 mt-6 mb-4"></span>
+                <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">ALPER KAMU</h2>
+                <p class="text-gray-500">UI Develeoper</p>
+              </div>
+            </div>
+            <div class="lg:w-1/3 lg:mb-0 p-4">
+              <div class="h-full text-center">
+                <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="https://dummyimage.com/305x305">
+                <p class="leading-relaxed">Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
+                <span class="inline-block h-1 w-10 rounded bg-yellow-500 mt-6 mb-4"></span>
+                <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">HENRY LETHAM</h2>
+                <p class="text-gray-500">CTO</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- other here -->
+
+      <div class="flex justify-center  ">
+        <nav class="self-center w-full max-w-7xl  ">
+            <div class="flex flex-col lg:flex-row justify-around items-center ">
+                <h1 class="uppercase pl-5 py-4 text-lg font-sans font-bold">hero</h1>
+                <ul class="hidden lg:flex items-center text-[18px] font-semibold pl-32">
+                    <li class="hover:underline  underline-offset-4 decoration-2 decoration-white py-2 rounded-lg px-5">
+                        <a href="#">Home</a></li>
+                    <li class="hover:underline underline-offset-4 decoration-2 decoration-white py-2 rounded-lg px-5"><a
+                            href="#">Contact</a></li>
+                    <li class="hover:underline underline-offset-4 decoration-2 decoration-white py-2 rounded-lg px-5"><a
+                            href="#">Services</a></li>
+                    <li class="hover:underline underline-offset-4 decoration-2 decoration-white py-2 rounded-lg px-5"><a
+                            href="#">About</a></li>
+                    <li class="hover:underline underline-offset-4 decoration-2 decoration-white py-2 rounded-lg px-5"><a
+                            href="#">Pricing</a></li>
+                </ul>
+                <div class=" text-center text-base pr-5  inline-flex"> <a href="#"
+                        class="w-8 h-8 inline-block rounded-full pt-[6px] hover:text-blue-500"><i
+                            class="fa fa-twitter"></i></a> <a href="#"
+                        class="w-8 h-8 inline-block rounded-full pt-[5px] hover:text-blue-500"><i
+                            class="fa fa-instagram"></i></a> <a href="#"
+                        class="w-8 h-8 inline-block rounded-full pt-[5px] hover:text-blue-500"><i
+                            class="fa fa-facebook"></i></a> <a href="#"
+                        class="w-8 h-8 inline-block rounded-full pt-[5px] hover:text-blue-500"><i
+                            class="fa fa-google"></i></a> <a href="#"
+                        class="w-8 h-8 inline-block rounded-full pt-[5px] hover:text-blue-500"><i
+                            class="fa fa-linkedin"></i></a> </div>
+            </div>
+        </nav>
+    </div>
+    <div class="flex justify-center ">
+        <div class="flex flex-col justify-center">
+
+            <div class="flex flex-col max-w-7xl justify-center items-center p-2 mt-10">
+                <div class="flex flex-col w-[90%] md:w-3/4 text-center items-center justify-center space-y-3">
+                    <div class="text-5xl font-bold ">
+                        Clean Green Crypto Energy for Crypto Mining
+                    </div>
+                    <div class="text-xl font-semibold text-gray-400 ">
+                        Help save the planet with KWATT tokenized electricity
+                    </div>
+                    <div class="md:text-lg"> 
+                        <input
+                            class="bg-gray-200/70 border drop-shadow-sm shadow-gray-700 rounded-2xl placeholder-slate-400 px-4 py-1 focus:outline-none "
+                            type="email" placeholder="E-mail Address" /> 
+                            <button
+                            class="p-1 m-2 rounded-2xl text-white bg-blue-500 px-4 font-semibold  hover:bg-blue-900 hover:trandform ease-in-out duration-300">
+                            Subscribe </button> 
+                        </div>
+                </div>
+                <div class="w-3/4 h-60 md:h-96 my-4  rounded-lg overflow-hidden">
+                    <img src="https://source.unsplash.com/500x400/?cryptocurrency,electricity" class="h-full w-full" alt="">
+                </div>
+            </div>
+            
+        </div>
+    </div>
+ 
+    <div class="flex justify-center bg-blue-500 p-4">
+      <div class="flex flex-col justify-center items-center ">
+          <div class="text-white text-3xl font-medium">Our Trusted Clients</div>
+          <div class="flex flex-col md:flex-row max-w-7xl justify-center items-center ">
+
+              <div class="overflow-hidden w-full m-4 flex justify-center bg-white rounded-lg  md:w-[33%] px-8">
+
+                  <div class="flex flex-col md:flex-row items-center justify-center  ">
+                      <div class="  items-center justify-center flex py-2">
+                          <div class="flex flex-col  items-center justify-center text-center">
+                              <img src="https://source.unsplash.com/150x150/?man,boy" alt="" class="rounded-full" />
+                              <div class="text-stone-600 font-medium m-2"> Tailblocks provides best Tailwind CSS
+                                  Components and Blocks to create an unique websites within minutes.</div>
+                              <div class="font-bold">John Doe</div>
+                              <div class="text-cyan-600 italic"><a href="#">Board Director of Tailblocks</a></div>
+                          </div>
+                      </div>
+
+                  </div>
+              </div>
+              <div class="overflow-hidden w-full m-4 flex justify-center bg-white rounded-lg  md:w-[33%] px-8">
+
+                  <div class="flex flex-col md:flex-row items-center justify-center  ">
+                      <div class="  items-center justify-center flex py-2">
+                          <div class="flex flex-col  items-center justify-center text-center">
+                              <img src="https://source.unsplash.com/150x150/?girl" alt="" class="rounded-full" />
+                              <div class="text-stone-600 font-medium m-2"> Tailblocks provides best Tailwind CSS
+                                  Components and Blocks to create an unique websites within minutes.</div>
+                              <div class="font-bold">Jessie</div>
+                              <div class="text-cyan-600 italic"><a href="#">MD of Tailblocks</a></div>
+                          </div>
+                      </div>
+
+                  </div>
+              </div>
+              <div class="overflow-hidden w-full m-4 flex justify-center bg-white rounded-lg  md:w-[33%] px-8">
+
+                  <div class="flex flex-col md:flex-row items-center justify-center  ">
+                      <div class="  items-center justify-center flex py-2">
+                          <div class="flex flex-col  items-center justify-center text-center">
+                              <img src="https://source.unsplash.com/150x150/?girl,woman" alt=""
+                                  class="rounded-full" />
+                              <div class="text-stone-600 font-medium m-2"> Tailblocks provides best Tailwind CSS
+                                  Components and Blocks to create an unique websites within minutes.</div>
+                              <div class="font-bold">Davina Claire</div>
+                              <div class="text-cyan-600 italic"><a href="#">Board Director of Tailblocks</a></div>
+                          </div>
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div> 
+
+
+
+  <div class="flex justify-center bg-blue-900 text-white ">
+    <nav class="self-center w-full max-w-7xl  ">
+         
+    </nav>
+</div>
+<div class="flex justify-center  bg-blue-900 p-5 md:p-16 lg:p-28">
+    <div class="flex flex-col justify-center  max-w-7xl  text-white">
+        <h1 class="text-base font-medium tracking-wider ">Welcome to my Client Template</h1>
+        <span class="underline underline-offset-2 text-white -mt-3"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; </span>
+        <div class="flex flex-col text-white mt-5">
+            <h1 class="text-4xl md:text-[50px] font-semibold">Hello I'm John Watson</h1>
+            <p class="text-xl mt-2 md:mt-4 tracking-wide">Designer - Developer - Freelancer</p>
+        </div>
+        <p class="mt-4 text-sm md:w-[52%] tracking-wide leading-7">Tailblocks provides best Tailwind CSS
+            components. Visit our website and feel free to give feedback. With the help of Tailblocks, a user can
+            build a website in a much lesser time.</p>
+        <div class="space-x-3 mt-6 md:mt-4">
+            <a href="#"> <i class="fa-brands fa-facebook-f bg-blue-600 hover:text-blue-500 hover:bg-white rounded-full px-3 py-[11px] w-9 h-9 text-center "></i>
+            </a>
+            <a href="#"> <i class="fa-brands fa-twitter bg-blue-600 hover:text-red-500 hover:bg-white rounded-full px-[10px] py-[11px] w-9 h-9 text-center"></i>
+            </a>
+            <a href="#"> <i class="fa-brands fa-linkedin bg-blue-600 hover:text-yellow-500 hover:bg-white rounded-full px-3 py-[11px] w-9 h-9 text-center"></i>
+            </a>
+            <a href="#"> <i class="fa-brands fa-chrome bg-blue-600 hover:text-indigo-600 hover:bg-white rounded-full px-[10px] py-[11px] w-9 h-9 text-center"></i>
+            </a>
+
+        </div>
+        <div class="flex mt-10 space-x-5">
+            <button class="bg-white text-blue-600 px-6 py-2 hover:brightness-105 font-semibold">Read More</button>
+            <button
+                class="bg-blue-900 text-white border-2 border-white px-6 py-2 hover:brightness-105 font-semibold">Contact
+                Me</button>
+
+        </div>
+    </div>
+</div> 
+
+<div class="bg-white py-6 sm:py-8 lg:py-12">
+  <div class="max-w-screen-xl px-4 md:px-8 mx-auto">
+    <!-- text - start -->
+    <div class="mb-10 md:mb-16">
+      <h2 class="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-6">Blog</h2>
+
+      <p class="max-w-screen-md text-gray-500 md:text-lg text-center mx-auto">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is random or otherwise generated.</p>
+    </div>
+    <!-- text - end -->
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 md:gap-6 xl:gap-8">
+      <!-- article - start -->
+      <div class="flex flex-col md:flex-row items-center border rounded-lg overflow-hidden">
+        <a href="#" class="group w-full md:w-32 lg:w-48 h-48 md:h-full block self-start shrink-0 bg-gray-100 overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Minh Pham" class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
+        </a>
+
+        <div class="flex flex-col gap-2 p-4 lg:p-6">
+          <span class="text-gray-400 text-sm">July 19, 2021</span>
+
+          <h2 class="text-gray-800 text-xl font-bold">
+            <a href="#" class="hover:text-indigo-500 active:text-indigo-600 transition duration-100">New trends in Tech</a>
+          </h2>
+
+          <p class="text-gray-500">This is a section of some simple filler text, also known as placeholder text.</p>
+
+          <div>
+            <a href="#" class="text-indigo-500 hover:text-indigo-600 active:text-indigo-700 font-semibold transition duration-100">Read more</a>
+          </div>
+        </div>
+      </div>
+      <!-- article - end -->
+
+      <!-- article - start -->
+      <div class="flex flex-col md:flex-row items-center border rounded-lg overflow-hidden">
+        <a href="#" class="group w-full md:w-32 lg:w-48 h-48 md:h-full block self-start shrink-0 bg-gray-100 overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Lorenzo Herrera" class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
+        </a>
+
+        <div class="flex flex-col gap-2 p-4 lg:p-6">
+          <span class="text-gray-400 text-sm">April 07, 2021</span>
+
+          <h2 class="text-gray-800 text-xl font-bold">
+            <a href="#" class="hover:text-indigo-500 active:text-indigo-600 transition duration-100">Working with legacy stacks</a>
+          </h2>
+
+          <p class="text-gray-500">This is a section of some simple filler text, also known as placeholder text.</p>
+
+          <div>
+            <a href="#" class="text-indigo-500 hover:text-indigo-600 active:text-indigo-700 font-semibold transition duration-100">Read more</a>
+          </div>
+        </div>
+      </div>
+      <!-- article - end -->
+
+      <!-- article - start -->
+      <div class="flex flex-col md:flex-row items-center border rounded-lg overflow-hidden">
+        <a href="#" class="group w-full md:w-32 lg:w-48 h-48 md:h-full block self-start shrink-0 bg-gray-100 overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1542759564-7ccbb6ac450a?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Magicle" class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
+        </a>
+
+        <div class="flex flex-col gap-2 p-4 lg:p-6">
+          <span class="text-gray-400 text-sm">March 15, 2021</span>
+
+          <h2 class="text-gray-800 text-xl font-bold">
+            <a href="#" class="hover:text-indigo-500 active:text-indigo-600 transition duration-100">10 best smartphones for devs</a>
+          </h2>
+
+          <p class="text-gray-500">This is a section of some simple filler text, also known as placeholder text.</p>
+
+          <div>
+            <a href="#" class="text-indigo-500 hover:text-indigo-600 active:text-indigo-700 font-semibold transition duration-100">Read more</a>
+          </div>
+        </div>
+      </div>
+      <!-- article - end -->
+
+      <!-- article - start -->
+      <div class="flex flex-col md:flex-row items-center border rounded-lg overflow-hidden">
+        <a href="#" class="group w-full md:w-32 lg:w-48 h-48 md:h-full block self-start shrink-0 bg-gray-100 overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1610465299996-30f240ac2b1c?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Martin Sanchez" class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
+        </a>
+
+        <div class="flex flex-col gap-2 p-4 lg:p-6">
+          <span class="text-gray-400 text-sm">January 27, 2021</span>
+
+          <h2 class="text-gray-800 text-xl font-bold">
+            <a href="#" class="hover:text-indigo-500 active:text-indigo-600 transition duration-100">8 High performance Notebooks</a>
+          </h2>
+
+          <p class="text-gray-500">This is a section of some simple filler text, also known as placeholder text.</p>
+
+          <div>
+            <a href="#" class="text-indigo-500 hover:text-indigo-600 active:text-indigo-700 font-semibold transition duration-100">Read more</a>
+          </div>
+        </div>
+      </div>
+      <!-- article - end -->
+    </div>
+  </div>
+</div>
+
+<div class="bg-white py-6 sm:py-8 lg:py-12">
+  <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
+    <div class="flex justify-between items-end gap-4 mb-6">
+      <h2 class="text-gray-800 text-2xl lg:text-3xl font-bold">Selected</h2>
+
+      <a href="#" class="inline-block bg-white hover:bg-gray-100 active:bg-gray-200 focus-visible:ring ring-indigo-300 border text-gray-500 text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-4 md:px-8 py-2 md:py-3">Show more</a>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 md:gap-x-6 gap-y-8">
+      <!-- product - start -->
+      <div>
+        <a href="#" class="group h-80 block bg-gray-100 rounded-lg overflow-hidden relative mb-2 lg:mb-3">
+          <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Rachit Tank" class="w-full h-full object-cover object-center group-hover:scale-110 transition duration-200" />
+
+          <span class="bg-red-500 text-white text-sm tracking-wider uppercase rounded-br-lg absolute left-0 top-0 px-3 py-1.5">sale</span>
+        </a>
+
+        <div>
+          <a href="#" class="text-gray-500 hover:gray-800 lg:text-lg transition duration-100 mb-1">Timely Watch</a>
+
+          <div class="flex items-end gap-2">
+            <span class="text-gray-800 lg:text-lg font-bold">$15.00</span>
+            <span class="text-red-500 line-through mb-0.5">$30.00</span>
+          </div>
+        </div>
+      </div>
+      <!-- product - end -->
+
+      <!-- product - start -->
+      <div>
+        <a href="#" class="group h-80 block bg-gray-100 rounded-lg overflow-hidden relative mb-2 lg:mb-3">
+          <img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Galina N" class="w-full h-full object-cover object-center group-hover:scale-110 transition duration-200" />
+        </a>
+
+        <div>
+          <a href="#" class="text-gray-500 hover:gray-800 lg:text-lg transition duration-100 mb-1">Fancy Plant</a>
+
+          <div class="flex items-end gap-2">
+            <span class="text-gray-800 lg:text-lg font-bold">$9.00</span>
+          </div>
+        </div>
+      </div>
+      <!-- product - end -->
+
+      <!-- product - start -->
+      <div>
+        <a href="#" class="group h-80 block bg-gray-100 rounded-lg overflow-hidden relative mb-2 lg:mb-3">
+          <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by eniko kis" class="w-full h-full object-cover object-center group-hover:scale-110 transition duration-200" />
+        </a>
+
+        <div>
+          <a href="#" class="text-gray-500 hover:gray-800 lg:text-lg transition duration-100 mb-1">Elderly Cam</a>
+
+          <div class="flex items-end gap-2">
+            <span class="text-gray-800 lg:text-lg font-bold">$45.00</span>
+          </div>
+        </div>
+      </div>
+      <!-- product - end -->
+
+      <!-- product - start -->
+      <div>
+        <a href="#" class="group h-80 block bg-gray-100 rounded-lg overflow-hidden relative mb-2 lg:mb-3">
+          <img src="https://images.unsplash.com/photo-1560343090-f0409e92791a?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Irene Kredenets" class="w-full h-full object-cover object-center group-hover:scale-110 transition duration-200" />
+        </a>
+
+        <div>
+          <a href="#" class="text-gray-500 hover:gray-800 lg:text-lg transition duration-100 mb-1">Shiny Shoe</a>
+
+          <div class="flex items-end gap-2">
+            <span class="text-gray-800 lg:text-lg font-bold">$29.00</span>
+          </div>
+        </div>
+      </div>
+      <!-- product - end -->
+
+      <!-- product - start -->
+      <div>
+        <a href="#" class="group h-80 block bg-gray-100 rounded-lg overflow-hidden relative mb-2 lg:mb-3">
+          <img src="https://images.unsplash.com/photo-1528476513691-07e6f563d97f?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Charles Deluvio" class="w-full h-full object-cover object-center group-hover:scale-110 transition duration-200" />
+        </a>
+
+        <div>
+          <a href="#" class="text-gray-500 hover:gray-800 lg:text-lg transition duration-100 mb-1">Spiky Plant</a>
+
+          <div class="flex items-end gap-2">
+            <span class="text-gray-800 lg:text-lg font-bold">$4.00</span>
+          </div>
+        </div>
+      </div>
+      <!-- product - end -->
+
+      <!-- product - start -->
+      <div>
+        <a href="#" class="group h-80 block bg-gray-100 rounded-lg overflow-hidden relative mb-2 lg:mb-3">
+          <img src="https://images.unsplash.com/photo-1612033448550-9d6f9c17f07d?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Fernando Lavin" class="w-full h-full object-cover object-center group-hover:scale-110 transition duration-200" />
+        </a>
+
+        <div>
+          <a href="#" class="text-gray-500 hover:gray-800 lg:text-lg transition duration-100 mb-1">Wieldy Film</a>
+
+          <div class="flex items-end gap-2">
+            <span class="text-gray-800 lg:text-lg font-bold">$19.00</span>
+          </div>
+        </div>
+      </div>
+      <!-- product - end -->
+
+      <!-- product - start -->
+      <div>
+        <a href="#" class="group h-80 block bg-gray-100 rounded-lg overflow-hidden relative mb-2 lg:mb-3">
+          <img src="https://images.unsplash.com/photo-1579609598065-79f8e5bcfb70?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Kiran CK" class="w-full h-full object-cover object-center group-hover:scale-110 transition duration-200" />
+          <span class="bg-red-500 text-white text-sm tracking-wider uppercase rounded-br-lg absolute left-0 top-0 px-3 py-1.5">sale</span>
+        </a>
+
+        <div>
+          <a href="#" class="text-gray-500 hover:gray-800 lg:text-lg transition duration-100 mb-1">Sturdy Stand</a>
+
+          <div class="flex items-end gap-2">
+            <span class="text-gray-800 lg:text-lg font-bold">$12.00</span>
+            <span class="text-red-500 line-through mb-0.5">$24.00</span>
+          </div>
+        </div>
+      </div>
+      <!-- product - end -->
+
+      <!-- product - start -->
+      <div>
+        <a href="#" class="group h-80 block bg-gray-100 rounded-lg overflow-hidden relative mb-2 lg:mb-3">
+          <img src="https://images.unsplash.com/photo-1619066045029-5c7e8537bd8c?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Fakurian Design" class="w-full h-full object-cover object-center group-hover:scale-110 transition duration-200" />
+        </a>
+
+        <div>
+          <a href="#" class="text-gray-500 hover:gray-800 lg:text-lg transition duration-100 mb-1">Lazy Bottle</a>
+
+          <div class="flex items-end gap-2">
+            <span class="text-gray-800 lg:text-lg font-bold">$9.00</span>
+          </div>
+        </div>
+      </div>
+      <!-- product - end -->
+    </div>
+  </div>
+</div>
+
+<div class="bg-white py-6 sm:py-8 lg:py-12">
+  <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
+    <h2 class="text-gray-800 text-2xl lg:text-3xl font-bold text-center mb-4 md:mb-8">Login</h2>
+
+    <form class="max-w-lg border rounded-lg mx-auto">
+      <div class="flex flex-col gap-4 p-4 md:p-8">
+        <div>
+          <label for="email" class="inline-block text-gray-800 text-sm sm:text-base mb-2">Email</label>
+          <input name="email" class="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2" />
+        </div>
+
+        <div>
+          <label for="password" class="inline-block text-gray-800 text-sm sm:text-base mb-2">Password</label>
+          <input name="password" class="w-full bg-gray-50 text-gray-800 border focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2" />
+        </div>
+
+        <button class="block bg-gray-800 hover:bg-gray-700 active:bg-gray-600 focus-visible:ring ring-gray-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3">Log in</button>
+
+        <div class="flex justify-center items-center relative">
+          <span class="h-px bg-gray-300 absolute inset-x-0"></span>
+          <span class="bg-white text-gray-400 text-sm relative px-4">Log in with social</span>
+        </div>
+
+        <button class="flex justify-center items-center bg-blue-500 hover:bg-blue-600 active:bg-blue-700 focus-visible:ring ring-blue-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 gap-2 px-8 py-3">
+          <svg class="w-5 h-5 shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 0C5.37273 0 0 5.37273 0 12C0 18.0164 4.43182 22.9838 10.2065 23.8516V15.1805H7.23764V12.0262H10.2065V9.92727C10.2065 6.45218 11.8996 4.92655 14.7878 4.92655C16.1711 4.92655 16.9025 5.02909 17.2489 5.076V7.82945H15.2787C14.0525 7.82945 13.6244 8.99182 13.6244 10.302V12.0262H17.2178L16.7302 15.1805H13.6244V23.8773C19.4815 23.0825 24 18.0747 24 12C24 5.37273 18.6273 0 12 0Z" fill="white" />
+          </svg>
+
+          Continue with Facebook
+        </button>
+
+        <button class="flex justify-center items-center bg-white hover:bg-gray-100 active:bg-gray-200 border border-gray-300 focus-visible:ring ring-gray-300 text-gray-800 text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 gap-2 px-8 py-3">
+          <svg class="w-5 h-5 shrink-0" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M23.7449 12.27C23.7449 11.48 23.6749 10.73 23.5549 10H12.2549V14.51H18.7249C18.4349 15.99 17.5849 17.24 16.3249 18.09V21.09H20.1849C22.4449 19 23.7449 15.92 23.7449 12.27Z" fill="#4285F4" />
+            <path d="M12.2549 24C15.4949 24 18.2049 22.92 20.1849 21.09L16.3249 18.09C15.2449 18.81 13.8749 19.25 12.2549 19.25C9.12492 19.25 6.47492 17.14 5.52492 14.29H1.54492V17.38C3.51492 21.3 7.56492 24 12.2549 24Z" fill="#34A853" />
+            <path d="M5.52488 14.29C5.27488 13.57 5.14488 12.8 5.14488 12C5.14488 11.2 5.28488 10.43 5.52488 9.71V6.62H1.54488C0.724882 8.24 0.254883 10.06 0.254883 12C0.254883 13.94 0.724882 15.76 1.54488 17.38L5.52488 14.29Z" fill="#FBBC05" />
+            <path d="M12.2549 4.75C14.0249 4.75 15.6049 5.36 16.8549 6.55L20.2749 3.13C18.2049 1.19 15.4949 0 12.2549 0C7.56492 0 3.51492 2.7 1.54492 6.62L5.52492 9.71C6.47492 6.86 9.12492 4.75 12.2549 4.75Z" fill="#EA4335" />
+          </svg>
+
+          Continue with Google
+        </button>
+      </div>
+
+      <div class="flex justify-center items-center bg-gray-100 p-4">
+        <p class="text-gray-500 text-sm text-center">Don't have an account? <a href="#" class="text-indigo-500 hover:text-indigo-600 active:text-indigo-700 transition duration-100">Register</a></p>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="bg-white lg:pb-12">
+  <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
+    <header class="flex justify-between items-center py-4 md:py-8">
+      <!-- logo - start -->
+      <a href="/" class="inline-flex items-center text-black-800 text-2xl md:text-3xl font-bold gap-2.5" aria-label="logo">
+        <svg width="95" height="94" viewBox="0 0 95 94" class="w-6 h-auto text-indigo-500" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M96 0V47L48 94H0V47L48 0H96Z" />
+        </svg>
+
+        Flowrift
+      </a>
+      <!-- logo - end -->
+
+      <!-- nav - start -->
+      <nav class="hidden lg:flex gap-12">
+        <a href="#" class="text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100">Home</a>
+        <a href="#" class="inline-flex items-center text-indigo-500 text-lg font-semibold gap-1">
+          Features
+
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-800" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </a>
+        <a href="#" class="text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100">Pricing</a>
+        <a href="#" class="text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100">About</a>
+      </nav>
+      <!-- nav - end -->
+
+      <!-- buttons - start -->
+      <div class="hidden lg:flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-2.5 -ml-8">
+        <a href="#" class="inline-block focus-visible:ring ring-indigo-300 text-gray-500 hover:text-indigo-500 active:text-indigo-600 text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-4 py-3">Sign in</a>
+
+        <a href="#" class="inline-block bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700 focus-visible:ring ring-indigo-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3">Sign up</a>
+      </div>
+
+      <button type="button" class="inline-flex items-center lg:hidden bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-indigo-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold rounded-lg gap-2 px-2.5 py-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+        </svg>
+
+        Menu
+      </button>
+      <!-- buttons - end -->
+    </header>
+
+    <!-- menu - start -->
+    <div class="w-full hidden lg:block bg-gray-50 border rounded-lg shadow-sm overflow-hidden">
+      <div class="max-w-screen-lg flex items-center gap-8 p-8 mx-auto">
+        <div class="w-2/3 grid grid-cols-2 gap-8">
+          <!-- link - start -->
+          <a href="#" class="group flex gap-4">
+            <div class="w-10 md:w-12 h-10 md:h-12 flex justify-center items-center shrink-0 bg-indigo-500 group-hover:bg-indigo-600 group-active:bg-indigo-700 text-white rounded-lg shadow-lg transition duration-100">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+              </svg>
+            </div>
+
+            <div>
+              <div class="font-semibold mb-1">Growth</div>
+              <p class="text-sm text-gray-500">This is a section of some simple filler text, also known as placeholder text.</p>
+            </div>
+          </a>
+          <!-- link - end -->
+
+          <!-- link - start -->
+          <a href="#" class="group flex gap-4">
+            <div class="w-10 md:w-12 h-10 md:h-12 flex justify-center items-center shrink-0 bg-indigo-500 group-hover:bg-indigo-600 group-active:bg-indigo-700 text-white rounded-lg shadow-lg transition duration-100">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+            </div>
+
+            <div>
+              <div class="font-semibold mb-1">Security</div>
+              <p class="text-sm text-gray-500">This is a section of some simple filler text, also known as placeholder text.</p>
+            </div>
+          </a>
+          <!-- link - end -->
+
+          <!-- link - start -->
+          <a href="#" class="group flex gap-4">
+            <div class="w-10 md:w-12 h-10 md:h-12 flex justify-center items-center shrink-0 bg-indigo-500 group-hover:bg-indigo-600 group-active:bg-indigo-700 text-white rounded-lg shadow-lg transition duration-100">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+              </svg>
+            </div>
+
+            <div>
+              <div class="font-semibold mb-1">Cloud</div>
+              <p class="text-sm text-gray-500">This is a section of some simple filler text, also known as placeholder text.</p>
+            </div>
+          </a>
+          <!-- link - end -->
+
+          <!-- link - start -->
+          <a href="#" class="group flex gap-4">
+            <div class="w-10 md:w-12 h-10 md:h-12 flex justify-center items-center shrink-0 bg-indigo-500 group-hover:bg-indigo-600 group-active:bg-indigo-700 text-white rounded-lg shadow-lg transition duration-100">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
+              </svg>
+            </div>
+
+            <div>
+              <div class="font-semibold mb-1">Analytics</div>
+              <p class="text-sm text-gray-500">This is a section of some simple filler text, also known as placeholder text.</p>
+            </div>
+          </a>
+          <!-- link - end -->
+        </div>
+
+        <!-- promo - start -->
+        <div class="w-1/3 border rounded-lg overflow-hidden">
+          <div class="h-48 bg-gray-100">
+            <img src="https://images.unsplash.com/photo-1619118884592-11b151f1ae11?auto=format&q=75&fit=crop&w=320" loading="lazy" alt="Photo by Fakurian Design" class="w-full h-full object-cover object-center" />
+          </div>
+
+          <div class="flex justify-between items-center bg-white gap-2 p-3">
+            <p class="text-gray-500 text-sm">This is some simple filler text.</p>
+
+            <a href="#" class="inline-block shrink-0 bg-white hover:bg-gray-50 active:bg-gray-100 focus-visible:ring ring-indigo-300 text-indigo-500 text-sm font-semibold border rounded-lg outline-none transition duration-100 px-3 py-1">More</a>
+          </div>
+        </div>
+        <!-- promo - end -->
+      </div>
+    </div>
+    <!-- menu - end -->
+  </div>
+</div>
+
+
+
+<div class="bg-white pb-6 sm:pb-8 lg:pb-12">
+  <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
+    <header class="flex justify-between items-center py-4 md:py-8 mb-8 md:mb-12 xl:mb-16">
+      <!-- logo - start -->
+      <a href="/" class="inline-flex items-center text-black-800 text-2xl md:text-3xl font-bold gap-2.5" aria-label="logo">
+        <svg width="95" height="94" viewBox="0 0 95 94" class="w-6 h-auto text-indigo-500" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M96 0V47L48 94H0V47L48 0H96Z" />
+        </svg>
+
+        Flowrift
+      </a>
+      <!-- logo - end -->
+
+      <!-- nav - start -->
+      <nav class="hidden lg:flex gap-12">
+        <a href="#" class="text-indigo-500 text-lg font-semibold">Home</a>
+        <a href="#" class="text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100">Features</a>
+        <a href="#" class="text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100">Pricing</a>
+        <a href="#" class="text-gray-600 hover:text-indigo-500 active:text-indigo-700 text-lg font-semibold transition duration-100">About</a>
+      </nav>
+      <!-- nav - end -->
+
+      <!-- buttons - start -->
+      <a href="#" class="hidden lg:inline-block bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-indigo-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3">Contact Sales</a>
+
+      <button type="button" class="inline-flex items-center lg:hidden bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-indigo-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold rounded-lg gap-2 px-2.5 py-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+        </svg>
+
+        Menu
+      </button>
+      <!-- buttons - end -->
+    </header>
+
+    <section class="flex flex-col lg:flex-row justify-between gap-6 sm:gap-10 md:gap-16">
+      <!-- content - start -->
+      <div class="xl:w-5/12 flex flex-col justify-center sm:text-center lg:text-left lg:py-12 xl:py-24">
+        <p class="text-indigo-500 md:text-lg xl:text-xl font-semibold mb-4 md:mb-6">Very proud to introduce</p>
+
+        <h1 class="text-black-800 text-4xl sm:text-5xl md:text-6xl font-bold mb-8 md:mb-12">Revolutionary way to build the web</h1>
+
+        <p class="lg:w-4/5 text-gray-500 xl:text-lg leading-relaxed mb-8 md:mb-12">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text but is random.</p>
+
+        <div class="flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-2.5">
+          <a href="#" class="inline-block bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700 focus-visible:ring ring-indigo-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3">Start now</a>
+
+          <a href="#" class="inline-block bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-indigo-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3">Take tour</a>
+        </div>
+      </div>
+      <!-- content - end -->
+
+      <!-- image - start -->
+      <div class="xl:w-5/12 h-48 lg:h-auto bg-gray-100 overflow-hidden shadow-lg rounded-lg">
+        <img src="https://images.unsplash.com/photo-1618004912476-29818d81ae2e?auto=format&q=75&fit=crop&w=1000" loading="lazy" alt="Photo by Fakurian Design" class="w-full h-full object-cover object-center" />
+      </div>
+      <!-- image - end -->
+    </section>
+  </div>
+</div>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://use.fontawesome.com/03f8a0ebd4.js"></script>
+ 
+  <!--  js link other tailwind css here -->
+  <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
+ </body>
+  </html>
